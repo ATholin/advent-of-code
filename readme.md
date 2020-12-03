@@ -3,7 +3,7 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 
 ## [2020](https://adventofcode.com/2020/)
 
-[![2020 Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ATholin/advent-of-code/master/.github/badges/2020.json)](./src/2020/)
+[![2020 Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ATholin/advent-of-code/main/.github/badges/2020.json)](./src/2020/)
 
 <!-- markdownlint-disable MD013 -->
 
