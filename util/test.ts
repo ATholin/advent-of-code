@@ -1,4 +1,5 @@
 import chalk from "chalk";
+import { TestCase } from "./@types/global";
 
 const grayBar = chalk.gray("║");
 const blueBar = chalk.blueBright("│");
