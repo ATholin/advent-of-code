@@ -87,7 +87,7 @@ export function getAppRoot() {
 	return currentDir;
 }
 
-export function getDayRoot(day: number, year: number, rootDir = path.join(getAppRoot(), "years")) {
+export function getDayRoot(day: number, year: number, rootDir = path.join(getAppRoot(), "src")) {
 	const dayWithLeadingZeros = String(day).padStart(2, "0");
 	return path.join(rootDir, String(year), dayWithLeadingZeros);
 }
@@ -96,7 +96,7 @@ export function getProblemUrl(day: number, year: number) {
 	return `https://adventofcode.com/${year}/day/${day}`;
 }
 
-export async function getInput(day: number, year: number, rootDir = path.join(getAppRoot(), "years")) {
+export async function getInput(day: number, year: number, rootDir = path.join(getAppRoot(), "src")) {
 	const dayRoot = getDayRoot(day, year, rootDir);
 	return fs.readFile(path.join(dayRoot, "input.txt"), "utf-8");
 }

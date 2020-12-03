@@ -1,7 +1,20 @@
 # Advent of Code
 This repository contains my solutions for [Advent of Code](https://adventofcode.com) problems. All solutions are implemented in TypeScript and JavaScript, runnable with modern Node.js.
 
-** IF YOU DO NOT WANT SPOILERS, AVOID LOOKING IN THE `years` FOLDER! **
+## [2020](https://adventofcode.com/2020/)
+
+[![2020 Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ATholin/advent-of-code/master/.github/badges/2020.json)](./src/2020/)
+
+<!-- markdownlint-disable MD013 -->
+
+| Day 							| Part 1 							| Part 2 							|
+| ----------------------------- | ---------------------------------	| ---------------------------------	|
+| [Day 1](./src/2020/01/)		| [0.31ms](./src/2020/01/index.ts)	| [1.19ms](./src/2020/01/index.ts)	|
+| [Day 2](./src/2020/02/)		| [4.06ms](./src/2020/02/index.ts)	| [2.87ms](./src/2020/02/index.ts)	|
+| [Day 2](./src/2020/03/)		| [0.23ms](./src/2020/03/index.ts)	| [0.46ms](./src/2020/03/index.ts)	|
+
+<!-- markdownlint-enable MD013 -->
+
 
 ## Automatic workspace
 This repo contains a tool to automatically jump-start your workspace, including:
@@ -24,9 +37,9 @@ Prerequisites: install [Node.js](https://nodejs.org) 14 (LTS) or later.
 6. An instance of Chromium will open to a GitHub* login page. Log in with your credentials. Chromium will then close.
 7. Command line output will show progress for downloading the data for each problem in the current** year of AoC.
 
-Once this is done, the folder `years/<current_year>` will contain a folder for each day, each of which includes your personalized data file and a solution file ready-to-run. Go ahead, run `node years/2019/01` and see that it prints out "Not implemented" for Part 1 and Part 2 of that problem. That's your job! Open up `years/2019/01/index.ts` and get to work!
+Once this is done, the folder `src/<current_year>` will contain a folder for each day, each of which includes your personalized data file and a solution file ready-to-run. Go ahead, run `node src/2019/01` and see that it prints out "Not implemented" for Part 1 and Part 2 of that problem. That's your job! Open up `src/2019/01/index.ts` and get to work!
 
-To run the TypeScript solutions, use `npx ts-node years/YEAR/DAY`, replacing YEAR and DAY with the values for the solution you want to run. For example `npx ts-node years/2015/01`. If you want, you can install ts-node globally, which will allow to you remove npx from the invocation: `npm install --global ts-node` and then `ts-node years/2015/01`.
+To run the TypeScript solutions, use `npx ts-node src/YEAR/DAY`, replacing YEAR and DAY with the values for the solution you want to run. For example `npx ts-node src/2015/01`. If you want, you can install ts-node globally, which will allow to you remove npx from the invocation: `npm install --global ts-node` and then `ts-node src/2015/01`.
 
 **A bit more in-depth**
 

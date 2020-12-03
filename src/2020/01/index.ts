@@ -12,8 +12,8 @@ const DAY = 1;
 const DEBUG = true;
 LOGUTIL.setDebug(DEBUG);
 
-// solution path: /Users/at/Code/advent-of-code/years/2020/01/index.ts
-// data path    : /Users/at/Code/advent-of-code/years/2020/01/input.txt
+// solution path: /Users/at/Code/advent-of-code/src/2020/01/index.ts
+// data path    : /Users/at/Code/advent-of-code/src/2020/01/input.txt
 // problem url  : https://adventofcode.com/2020/day/1
 
 const p2020day1_part1 = async(input: string): Promise<any> => {

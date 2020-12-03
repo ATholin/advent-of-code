@@ -37,7 +37,7 @@ suck             : Suck in problem data from adventofcode.com.
 --year, -y       : Specify a year e.g., 2018. Defaults to current year.
                    Or specify "all" for all years (2015-current_year).
 --path, -p       : Specify root path for writing data. Must supply full,
-                   absolute path. Defaults to {app_root}/years.
+                   absolute path. Defaults to {app_root}/src.
 --template       : Specify path to solution seed template. Template file
                    name must end in in the format ".xx.dat", where xx can
                    be any extension. All solution files generated will 
@@ -204,7 +204,7 @@ function parseArgs() {
 	);
 
 	const rootPathIndex = args.findIndex(a => a === "--path" || a === "-p");
-	const rootPath = rootPathIndex >= 0 ? args[rootPathIndex + 1] : path.join(getAppRoot(), "years");
+	const rootPath = rootPathIndex >= 0 ? args[rootPathIndex + 1] : path.join(getAppRoot(), "src");
 
 	const templatePathIndex = args.findIndex(a => a === "--template");
 	let templatePath =

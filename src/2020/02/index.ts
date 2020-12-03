@@ -12,8 +12,8 @@ const DAY = 2;
 const DEBUG = true;
 LOGUTIL.setDebug(DEBUG);
 
-// solution path: /Users/at/Code/advent-of-code/years/2020/02/index.ts
-// data path    : /Users/at/Code/advent-of-code/years/2020/02/input.txt
+// solution path: /Users/at/Code/advent-of-code/src/2020/02/index.ts
+// data path    : /Users/at/Code/advent-of-code/src/2020/02/input.txt
 // problem url  : https://adventofcode.com/2020/day/2
 
 interface PasswordPolicy {
