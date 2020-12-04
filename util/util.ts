@@ -96,9 +96,14 @@ export function getProblemUrl(day: number, year: number) {
 	return `https://adventofcode.com/${year}/day/${day}`;
 }
 
-export async function getInput(day: number, year: number, rootDir = path.join(getAppRoot(), "src")) {
+export async function getInput(
+	day: number,
+	year: number,
+	file: string = "input.txt",
+	rootDir = path.join(getAppRoot(), "src")
+) {
 	const dayRoot = getDayRoot(day, year, rootDir);
-	return fs.readFile(path.join(dayRoot, "input.txt"), "utf-8");
+	return fs.readFile(path.join(dayRoot, file), "utf-8");
 }
 
 export function clamp(val: number, min: number, max: number) {
