@@ -1,7 +1,7 @@
 import { bench, read, split } from '@util';
 import { asc, desc } from 'util/util';
 import { day, year } from '.';
-import { BoardingPass } from './part_01';
+import { BoardingPass } from './part_one';
 
 /**
  * UTILITIES
