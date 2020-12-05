@@ -260,3 +260,4 @@ export const sum = (acc: number, next: number): number => acc + next;
 export const mult = (acc: number, next: number): number => acc * next;
 export const dup = (next: number): number => next * 2;
 export const asc = (a: number, b: number): number => a - b;
+export const desc = (a: number, b: number): number => b - a;
