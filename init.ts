@@ -5,7 +5,8 @@ import { LocalStorage } from "node-localstorage";
 import * as path from "path";
 import mkdirp from "mkdirp";
 import * as fs from "fs/promises";
-import { existsSync, mkdir } from "fs";
+import { existsSync } from "fs";
+import gatt from 'gatt';
 
 interface Settings {
 	pristine: boolean;
@@ -130,7 +131,7 @@ async function getDayData(day: number, year: number, fail = false): Promise<stri
 
 function getDataPath(day: number, year: number) {
 	const dataDir = getDayRoot(day, year, settings.rootPath);
-	return path.join(dataDir, "input.txt");
+	return path.join(dataDir, "resources", "input.txt");
 }
 
 function getSolutionPath(day: number, year: number) {
@@ -272,8 +273,18 @@ async function seed(year: number) {
 		}
 
 		if (settings.pristine || doesNotExistOrIsUnchanged) {
-			const seedText = replaceAll(await getTemplate(), replacements);
-			await fs.writeFile(solutionPath, seedText, "utf-8");
+			// const seedText = replaceAll(await getTemplate(), replacements);
+			// await fs.writeFile(solutionPath, seedText, "utf-8");
+
+			await gatt({
+				reader_directory: 'src/template/',
+				writer_directory: 'src/',
+				variables: {
+					year: year.toString(),
+					day: day.toString().padStart(2, "0"),
+					shortDay: day.toString(),
+				},
+			});
 		}
 	}
 }

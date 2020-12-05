@@ -1,7 +1,7 @@
 import { DayResults } from '@util'
 
-export const year = 2020;
-export const day = 2;
+export const year = <%= $.year %>;
+export const day = <%= $.shortDay %>;
 
 export const results: DayResults = {
 	one: {
