@@ -222,13 +222,6 @@ function parseArgs() {
 	const seed = args.includes("seed");
 	const pristine = args.includes("--pristine");
 
-	if (!existsSync(templatePath)) {
-		templatePath = templatePath + ".dat";
-	}
-	if (!existsSync(templatePath) && seed) {
-		throw new Error(`Could not find template at path: ${origTemplatePath}`);
-	}
-
 	Object.assign(settings, {
 		sessionToken,
 		years,
@@ -265,12 +258,6 @@ async function seed(year: number) {
 		};
 		await mkdirp(path.dirname(solutionPath));
 		let doesNotExistOrIsUnchanged = !existsSync(solutionPath);
-		if (!doesNotExistOrIsUnchanged) {
-			const compareTemplate = await getCompareTemplate();
-			const existingFileContents = await fs.readFile(solutionPath, "utf-8");
-			const compareSeed = replaceAll(compareTemplate, replacements);
-			doesNotExistOrIsUnchanged = compareSeed === existingFileContents;
-		}
 
 		if (settings.pristine || doesNotExistOrIsUnchanged) {
 			// const seedText = replaceAll(await getTemplate(), replacements);
