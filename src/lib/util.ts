@@ -25,25 +25,6 @@ export const inputToNumbers = (input: string): number[] =>
  */
 export const inputToStrings = (input: string): string[] => split(input);
 
-export function msToString(ms: number): string {
-	if (ms < 10000) {
-		return ms + 'ms';
-	} else if (ms < 60000) {
-		return ms / 1000 + 'sec';
-	} else {
-		const mins = Math.floor(ms / 60000);
-		return mins + 'min ' + (ms % 60000) / 1000 + 'sec';
-	}
-}
-
-/**
- * Returns a promise that resolves after a certain amount of time.
- * @param ms Number of milliseconds to wait
- */
-export async function wait(ms: number): Promise<void> {
-	return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 export function getLatestPuzzleDate(asOf = new Date()): DayYear {
 	const asUTC = new Date(asOf.getTime() + asOf.getTimezoneOffset() * 60 * 1000);
 	const asEST = new Date(asUTC.getTime() - 5 * 60 * 60 * 1000);
@@ -54,9 +35,6 @@ export function getLatestPuzzleDate(asOf = new Date()): DayYear {
 	const latestPuzzleDay = isDecember ? Math.min(currentDay, 25) : 25;
 	return { day: latestPuzzleDay, year: latestPuzzleYear };
 }
-
-// Use this if we move back to ESM
-// export const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * Starting from the directory this file is running in, search up

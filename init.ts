@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { getAppRoot, replaceAll, wait, getDayRoot, getLatestPuzzleDate } from '@lib/util';
+import { getAppRoot, getDayRoot, getLatestPuzzleDate } from '@lib/util';
 import playwright from 'playwright-chromium';
 import { LocalStorage } from 'node-localstorage';
 import * as path from 'path';
@@ -172,6 +172,36 @@ function getAllYears() {
 		years.push(i);
 	}
 	return years;
+}
+
+/**
+ * Helper to run multiple search-and-replace operations within a string.
+ * @param corpus Body of text in which to make replacements
+ * @param replacements Dictionary of search => replacement. Run in sequential order.
+ * @param global If false, only replace the first occurrence of each search value.
+ */
+export function replaceAll(
+	corpus: string,
+	replacements: { [search: string]: string },
+	global = true
+): string {
+	let current = corpus;
+	for (const entry of Object.entries(replacements)) {
+		if (global) {
+			current = current.split(entry[0]).join(entry[1]);
+		} else {
+			current = current.replace(entry[0], entry[1]);
+		}
+	}
+	return current;
+}
+
+/**
+ * Returns a promise that resolves after a certain amount of time.
+ * @param ms Number of milliseconds to wait
+ */
+export async function wait(ms: number): Promise<void> {
+	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function parseArgs() {
