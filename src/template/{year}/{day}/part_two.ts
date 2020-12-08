@@ -1,4 +1,4 @@
-import { bench, read } from '@util';
+import { bench, read } from '@lib';
 import { day, year } from '.';
 
 /**
@@ -10,7 +10,7 @@ import { day, year } from '.';
  */
 
 export const runner = (input: string): number => {
-	return 0
+	return 0;
 };
 
 if (require.main === module) {

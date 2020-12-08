@@ -1,5 +1,5 @@
-import { bench, read, split } from '@util';
-import { inputToNumbers } from 'util/util';
+import { bench, read } from '@lib';
+import { inputToNumbers } from '@lib/util';
 import { day, year } from '.';
 
 export const runner = (input: string): number => {
@@ -17,7 +17,7 @@ export const runner = (input: string): number => {
 		}
 	}
 
-	return 0
+	return 0;
 };
 
 if (require.main === module) {

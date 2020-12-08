@@ -1,6 +1,6 @@
-import { bench, read, split } from '@util';
+import { bench, read, split } from '@lib';
 import { day, year } from '.';
-import { calcDistance, calcPath } from './part_one';
+import { calcPath } from './part_one';
 
 /**
  * UTILITIES
@@ -15,7 +15,6 @@ export const runner = (input: string): number => {
 
 	const path1 = calculatedPaths[0];
 	const path2 = calculatedPaths[1];
-	const len = path1.length;
 
 	let fewestSteps = 99999;
 
@@ -23,15 +22,14 @@ export const runner = (input: string): number => {
 		if (path.x === 0 && path.y === 0) return;
 		if (path2.some((val) => val.x === path.x && val.y === path.y)) {
 			const steps1 = i;
-			const steps2 = path2
-			.findIndex((p) => p.x === path.x && p.y === path.y);
+			const steps2 = path2.findIndex((p) => p.x === path.x && p.y === path.y);
 			const steps = steps1 + steps2;
 
 			fewestSteps = Math.min(fewestSteps, steps);
 		}
 	});
 
-	return fewestSteps
+	return fewestSteps;
 };
 
 if (require.main === module) {

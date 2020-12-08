@@ -1,4 +1,4 @@
-import { DayResults } from '@util'
+import { DayResults } from '@lib'
 
 export const year = <%= $.year %>;
 export const day = <%= $.shortDay %>;

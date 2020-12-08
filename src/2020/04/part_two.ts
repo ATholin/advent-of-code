@@ -1,4 +1,4 @@
-import { bench, read, split } from '@util';
+import { bench, read } from '@lib';
 import { day, year } from '.';
 import { parsePassport, Passport, PassportField, validators, validRequired } from './part_one';
 
@@ -6,7 +6,10 @@ import { parsePassport, Passport, PassportField, validators, validRequired } fro
  * UTILITIES
  */
 
-const validData = (passport: Passport): boolean => validRequired(passport) && !passport.fields.some((field: PassportField) => !validators[field.key](field.value))
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+const validData = (passport: Passport): boolean =>
+	validRequired(passport) &&
+	!passport.fields.some((field: PassportField) => !validators[field.key](field.value));
 
 /**
  * RUNNER

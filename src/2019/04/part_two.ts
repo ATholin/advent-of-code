@@ -1,4 +1,4 @@
-import { bench, read } from '@util';
+import { bench, read } from '@lib';
 import { day, year } from '.';
 import { iterate } from './part_one';
 
@@ -7,8 +7,8 @@ import { iterate } from './part_one';
  */
 
 export const runner = (input: string): number => {
-	const [start, end] = input.split('-')
-	return iterate(start, end, true)
+	const [start, end] = input.split('-');
+	return iterate(start, end, true);
 };
 
 if (require.main === module) {

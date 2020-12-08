@@ -1,4 +1,4 @@
-import { bench, read, split } from '@util';
+import { bench, read, split } from '@lib';
 import { day, year } from '.';
 import { convert, PasswordPolicy } from './part_one';
 
@@ -7,15 +7,18 @@ import { convert, PasswordPolicy } from './part_one';
  */
 
 const validPosition = (pw: PasswordPolicy): boolean => {
-	return (pw.password.charAt(pw.first - 1) == pw.character) != (pw.password.charAt(pw.second - 1) == pw.character)
-}
+	return (
+		(pw.password.charAt(pw.first - 1) == pw.character) !=
+		(pw.password.charAt(pw.second - 1) == pw.character)
+	);
+};
 
 /**
  * RUNNER
  */
 
 export const runner = (input: string): number => {
-	return split(input).map(convert).filter(validPosition).length
+	return split(input).map(convert).filter(validPosition).length;
 };
 
 if (require.main === module) {

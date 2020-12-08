@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { getAppRoot, replaceAll, wait, getDayRoot, getProblemUrl, getLatestPuzzleDate } from "./util/util";
+import { getAppRoot, replaceAll, wait, getDayRoot, getLatestPuzzleDate } from "@lib/util";
 import playwright from "playwright-chromium";
 import { LocalStorage } from "node-localstorage";
 import * as path from "path";
@@ -141,26 +141,6 @@ function getSolutionPath(day: number, year: number) {
 	return path.join(dataDir, `index${templateExtension}`);
 }
 
-let template: string | undefined;
-async function getTemplate() {
-	if (template == undefined) {
-		template = await fs.readFile(settings.templatePath, "utf-8");
-	}
-	return template;
-}
-
-let compareTemplate: string | undefined;
-async function getCompareTemplate() {
-	if (compareTemplate == undefined) {
-		if (settings.compareWithPath && existsSync(settings.compareWithPath)) {
-			compareTemplate = await fs.readFile(settings.compareWithPath, "utf-8");
-		} else {
-			compareTemplate = "XXXXXX";
-		}
-	}
-	return compareTemplate;
-}
-
 function getReleaseTime(day: number, year: number) {
 	const inCurrentTZ = new Date(year, 11, day, 5);
 	return new Date(inCurrentTZ.getTime() - inCurrentTZ.getTimezoneOffset() * 60 * 1000);
@@ -208,12 +188,11 @@ function parseArgs() {
 	const rootPath = rootPathIndex >= 0 ? args[rootPathIndex + 1] : path.join(getAppRoot(), "src");
 
 	const templatePathIndex = args.findIndex(a => a === "--template");
-	let templatePath =
+	const templatePath =
 		templatePathIndex >= 0 ? args[templatePathIndex + 1] : path.join(getAppRoot(), "solutionTemplate.ts.dat");
-	const origTemplatePath = templatePath;
 
 	const compareWithIndex = args.findIndex(a => a === "--compare-with");
-	let compareWithPath =
+	const compareWithPath =
 		compareWithIndex >= 0 ? args[compareWithIndex + 1] : path.join(getAppRoot(), "compareTemplate.dat");
 
 	const sessionToken = sessionTokenIndex >= 0 ? args[sessionTokenIndex + 1] : undefined;
@@ -249,15 +228,8 @@ async function seed(year: number) {
 
 		const solutionPath = getSolutionPath(day, year);
 
-		const replacements = {
-			"{year}": String(year),
-			"{day}": String(day),
-			"{solution_path}": solutionPath,
-			"{data_path}": getDataPath(day, year),
-			"{problem_url}": getProblemUrl(day, year),
-		};
 		await mkdirp(path.dirname(solutionPath));
-		let doesNotExistOrIsUnchanged = !existsSync(solutionPath);
+		const doesNotExistOrIsUnchanged = !existsSync(solutionPath);
 
 		if (settings.pristine || doesNotExistOrIsUnchanged) {
 			// const seedText = replaceAll(await getTemplate(), replacements);

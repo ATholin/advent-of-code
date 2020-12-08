@@ -1,4 +1,4 @@
-import { bench, read, split } from '@util';
+import { bench, read, split } from '@lib';
 import { day, year } from '.';
 
 /**
@@ -6,10 +6,10 @@ import { day, year } from '.';
  */
 
 export interface PasswordPolicy {
-	password: string,
-	character: string,
-	first: number,
-	second: number
+	password: string;
+	character: string;
+	first: number;
+	second: number;
 }
 
 export const convert = (value: string): PasswordPolicy => {
@@ -20,21 +20,21 @@ export const convert = (value: string): PasswordPolicy => {
 		password: password,
 		character: policy[policy.length - 1],
 		first: Number(policy.split('-')[0]),
-		second: Number(policy.split('-')[1].split(' ')[0])
-	}
-}
+		second: Number(policy.split('-')[1].split(' ')[0]),
+	};
+};
 
 const validMinMax = (pw: PasswordPolicy): boolean => {
-	const num = pw.password.split('').filter(char => char === pw.character).length
+	const num = pw.password.split('').filter((char) => char === pw.character).length;
 	return num >= pw.first && num <= pw.second;
-}
+};
 
 /**
  * RUNNER
  */
 
 export const runner = (input: string): number => {
-	return split(input).map(convert).filter(validMinMax).length
+	return split(input).map(convert).filter(validMinMax).length;
 };
 
 if (require.main === module) {

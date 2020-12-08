@@ -1,25 +1,23 @@
-import * as util from "./util/util";
+import * as util from "@lib/util";
 import path from "path";
 import chalk from "chalk";
-import { log } from "./util/log";
-import { read, bench } from "./util/index";
+import { read, bench } from "@lib";
 
 let [year, day] = process.argv.slice(2).map(Number);
 if (year == undefined || day == undefined) {
 	({year, day} = util.getLatestPuzzleDate());
 }
 
-log(chalk.bold(`Running ${year} day ${day}\n`));
+console.log(chalk.bold(`Running ${year} day ${day}\n`));
 
 const dayDir = path.join(util.getDayRoot(day, year));
-const index = path.join(dayDir, "part_one");
 const part1 = path.join(dayDir, "part_one");
 const part2 = path.join(dayDir, "part_one");
-const { p1r } = require(part1);
-const { p2r } = require(part2);
+const p1r = import(part1);
+const p2r = import(part2);
 
 console.log("Part 1:");
-(async () => console.log(`Result: ${await bench(read(year, day), p1r)}`))();
+(async () => console.log(`Result: ${await bench(read(year, day), await p1r)}`))();
 
 console.log("Part 2:");
-(async () => console.log(`Result: ${await bench(read(year, day), p2r)}`))();
+(async () => console.log(`Result: ${await bench(read(year, day), await p2r)}`))();

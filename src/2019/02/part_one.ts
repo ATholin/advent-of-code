@@ -1,19 +1,18 @@
-import { bench, read } from '@util';
-import { IntCode } from 'util/intcode/intcode';
-import { inputToNumbers } from 'util/util';
+import { bench, read } from '@lib';
+import IntCode from '@lib/intcode';
 import { day, year } from '.';
 
 /**
  * UTILITIES
  */
 
- /**
+/**
  * RUNNER
  */
 
 export const runner = (input: string): number => {
-	const position1: number = 12
-	const position2: number = 2
+	const position1 = 12;
+	const position2 = 2;
 
 	return new IntCode(input)
 		.setAtPosition(1, position1)

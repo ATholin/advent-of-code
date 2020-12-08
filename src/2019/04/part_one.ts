@@ -1,4 +1,4 @@
-import { bench, read } from '@util';
+import { bench, read } from '@lib';
 import { day, year } from '.';
 
 /**
@@ -14,35 +14,35 @@ import { day, year } from '.';
 const checkIncreasing = (nums) => nums.split('').toString() === nums.split('').sort().toString();
 
 const checkPassword = (number, part2 = false) => {
-  const str = number.toString();
-  const res = str.match(/(\d)\1+(?!\1)/g);
+	const str = number.toString();
+	const res = str.match(/(\d)\1+(?!\1)/g);
 
-  if (!checkIncreasing(str)) return false;
+	if (!checkIncreasing(str)) return false;
 
-  if (res == null) return false;
+	if (res == null) return false;
 
-  if (part2 && res.filter((v) => v.length === 2).length === 0) return false;
+	if (part2 && res.filter((v) => v.length === 2).length === 0) return false;
 
-  return true;
+	return true;
 };
 
-export const iterate = (start, end, part2 = false) => {
-  let count = 0;
+export const iterate = (start: string, end: string | number, part2 = false): number => {
+	let count = 0;
 
-  for (let i = start; i <= end; i += 1) {
-    if (checkPassword(i, part2)) count += 1;
-  }
+	for (let i = start; i <= end; i += 1) {
+		if (checkPassword(i, part2)) count += 1;
+	}
 
-  return count;
+	return count;
 };
 
- /**
+/**
  * RUNNER
  */
 
 export const runner = (input: string): number => {
-  const [start, end] = input.split('-')
-  return iterate(start, end)
+	const [start, end] = input.split('-');
+	return iterate(start, end);
 };
 
 if (require.main === module) {

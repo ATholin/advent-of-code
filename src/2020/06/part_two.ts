@@ -1,5 +1,5 @@
-import { bench, read, split } from '@util';
-import { sum } from 'util/util';
+import { bench, read } from '@lib';
+import { sum } from '@lib/util';
 import { day, year } from '.';
 
 /**
@@ -11,18 +11,21 @@ import { day, year } from '.';
  */
 
 export const runner = (input: string): number => {
-	return input.split('\n\n')
+	return input
+		.split('\n\n')
 		.map((group: string) => group.split('\n'))
 		.map((group: string[]) => {
-			const groupString = group.join('')
-			const groupAnswers = [...groupString].reduce(
-				(map, val) => map.set(val, (map.get(val) ?? 0) + 1),
-				new Map<string, number>()
-			).values()
+			const groupString = group.join('');
+			const groupAnswers = [...groupString]
+				.reduce(
+					(map, val) => map.set(val, (map.get(val) ?? 0) + 1),
+					new Map<string, number>()
+				)
+				.values();
 
 			return [...groupAnswers].filter((v) => v === group.length).length;
 		})
-		.reduce(sum)
+		.reduce(sum);
 };
 
 if (require.main === module) {

@@ -1,4 +1,4 @@
-import { bench, read } from '@util';
+import { bench, read } from '@lib';
 import { inputToNumbers } from 'util/util';
 import { day, year } from '.';
 import { calc } from './part_one';
@@ -13,8 +13,8 @@ import { calc } from './part_one';
 
 export const runner = (input: string): number => {
 	return inputToNumbers(input)
-			.map((val: number) => calc(val, true))
-			.reduce((a, b) => a + b)
+		.map((val: number) => calc(val, true))
+		.reduce((a, b) => a + b);
 };
 
 if (require.main === module) {
