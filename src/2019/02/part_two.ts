@@ -1,5 +1,5 @@
 import { bench, read } from '@lib';
-import { IntCode } from 'util/intcode/intcode';
+import IntCode from '@lib/intcode';
 import { day, year } from '.';
 
 /**

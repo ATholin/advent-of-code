@@ -1,6 +1,5 @@
 import { bench, read, split } from '@lib';
 import { Vec2Like } from '@lib/model';
-import { Vec2Like } from 'util/model';
 import { day, year } from '.';
 
 /**

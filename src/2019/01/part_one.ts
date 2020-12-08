@@ -1,5 +1,5 @@
 import { bench, read } from '@lib';
-import { inputToNumbers } from 'util/util';
+import { inputToNumbers } from '@lib/util';
 import { day, year } from '.';
 
 /**

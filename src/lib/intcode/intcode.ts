@@ -106,7 +106,7 @@ export class IntCode {
 		if (opcode === instructions.IN) {
 			if (this.input && this.input.length > 0) {
 				const param1: number = this.parseParam(p1Mode, this.pc + 1, true);
-				this.program[param1] = this.input.shift();
+				this.program[param1] = this.input.shift() ?? 0;
 				this.pc += 2;
 			}
 		} else if (opcode === instructions.OUT) {
