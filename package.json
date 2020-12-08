@@ -10,7 +10,7 @@
 		"start": "ts-node run.ts",
 		"test": "mocha --config ./.mocharc.json",
 		"test:parallel": "mocha --parallel --config ./.mocharc.json",
-		"test:coverage": "nyc npm test",
+		"test:coverage": "nyc --reporter=lcov npm test",
 		"lint": "eslint --max-warnings=0 .",
 		"lint:fix": "eslint --fix .",
 		"lint:md": "markdownlint --ignore-path '.gitignore' .",
