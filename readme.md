@@ -15,6 +15,7 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 | [Day 4](./src/2020/04/)		| [2.82ms](./src/2020/04/index.ts)	| [3.80ms](./src/2020/04/index.ts)	|
 | [Day 5](./src/2020/05/)		| [11.6ms](./src/2020/05/index.ts)	| [17.8ms](./src/2020/05/index.ts)	|
 | [Day 6](./src/2020/06/)		| [11.2ms](./src/2020/06/index.ts)	| [15.7ms](./src/2020/06/index.ts)	|
+| [Day 7](./src/2020/07/)		| [322ms](./src/2020/07/index.ts)	| [16.1ms](./src/2020/07/index.ts)	|
 
 <!-- markdownlint-enable MD013 -->
 
