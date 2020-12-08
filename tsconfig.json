@@ -30,9 +30,16 @@
 			"@2019/*": ["src/2019/*"],
 			"@2020/*": ["src/2020/*"]
 		},
-		"typeRoots": ["./node_modules/@types", "./src/lib/@types"], 	/* List of folders to include type definitions from. */
-		"types": ["global", "node", "mocha"],                           		/* Type declaration files to be included in compilation. */
+		"typeRoots": [
+			"./node_modules/@types",
+			"./src/lib/@types"
+		] /* List of folders to include type definitions from. */,
+		"types": [
+			"global",
+			"node",
+			"mocha"
+		] /* Type declaration files to be included in compilation. */
 	},
-	"include": ["./src/**/*", "./util/**/*"],
+	"include": ["./src/**/*", "./util/**/*", "./*.ts"],
 	"exclude": ["**/node_modules/**/*"]
 }

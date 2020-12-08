@@ -1,4 +1,5 @@
 # Advent of Code
+
 This repository contains my solutions for [Advent of Code](https://adventofcode.com) problems. All solutions are implemented in TypeScript and JavaScript, runnable with modern Node.js.
 
 ## [2020](https://adventofcode.com/2020/)
@@ -7,29 +8,30 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 
 <!-- markdownlint-disable MD013 -->
 
-| Day 							| Part 1 							| Part 2 							|
-| ----------------------------- | ---------------------------------	| ---------------------------------	|
-| [Day 1](./src/2020/01/)		| [0.31ms](./src/2020/01/index.ts)	| [1.19ms](./src/2020/01/index.ts)	|
-| [Day 2](./src/2020/02/)		| [4.06ms](./src/2020/02/index.ts)	| [2.87ms](./src/2020/02/index.ts)	|
-| [Day 3](./src/2020/03/)		| [0.23ms](./src/2020/03/index.ts)	| [0.46ms](./src/2020/03/index.ts)	|
-| [Day 4](./src/2020/04/)		| [2.82ms](./src/2020/04/index.ts)	| [3.80ms](./src/2020/04/index.ts)	|
-| [Day 5](./src/2020/05/)		| [11.6ms](./src/2020/05/index.ts)	| [17.8ms](./src/2020/05/index.ts)	|
-| [Day 6](./src/2020/06/)		| [11.2ms](./src/2020/06/index.ts)	| [15.7ms](./src/2020/06/index.ts)	|
-| [Day 7](./src/2020/07/)		| [322ms](./src/2020/07/index.ts)	| [16.1ms](./src/2020/07/index.ts)	|
-| [Day 8](./src/2020/08/)		| [10.7ms](./src/2020/08/index.ts)	| [79.1ms](./src/2020/08/index.ts)	|
+| Day                     | Part 1                           | Part 2                           |
+| ----------------------- | -------------------------------- | -------------------------------- |
+| [Day 1](./src/2020/01/) | [0.31ms](./src/2020/01/index.ts) | [1.19ms](./src/2020/01/index.ts) |
+| [Day 2](./src/2020/02/) | [4.06ms](./src/2020/02/index.ts) | [2.87ms](./src/2020/02/index.ts) |
+| [Day 3](./src/2020/03/) | [0.23ms](./src/2020/03/index.ts) | [0.46ms](./src/2020/03/index.ts) |
+| [Day 4](./src/2020/04/) | [2.82ms](./src/2020/04/index.ts) | [3.80ms](./src/2020/04/index.ts) |
+| [Day 5](./src/2020/05/) | [11.6ms](./src/2020/05/index.ts) | [17.8ms](./src/2020/05/index.ts) |
+| [Day 6](./src/2020/06/) | [11.2ms](./src/2020/06/index.ts) | [15.7ms](./src/2020/06/index.ts) |
+| [Day 7](./src/2020/07/) | [322ms](./src/2020/07/index.ts)  | [16.1ms](./src/2020/07/index.ts) |
+| [Day 8](./src/2020/08/) | [10.7ms](./src/2020/08/index.ts) | [79.1ms](./src/2020/08/index.ts) |
 
 <!-- markdownlint-enable MD013 -->
 
-
 ## Automatic workspace
+
 This repo contains a tool to automatically jump-start your workspace, including:
 
-* Automatically download problem data
-* Generate a file for each problem from a template
+- Automatically download problem data
+- Generate a file for each problem from a template
 
 It also includes utilities for Logging and other common tasks (if you're using Node.js).
 
 ## Usage
+
 Prerequisites: install [Node.js](https://nodejs.org) 14 (LTS) or later.
 
 **Quick-start instructions**
@@ -39,8 +41,8 @@ Prerequisites: install [Node.js](https://nodejs.org) 14 (LTS) or later.
 3. Clone the forked repository
 4. `cd` into the repository and run `npm install`
 5. Run `npx ts-node init.ts suck seed --pristine`. If you run this again, REMOVE `--pristine`! See below for details.
-6. An instance of Chromium will open to a GitHub* login page. Log in with your credentials. Chromium will then close.
-7. Command line output will show progress for downloading the data for each problem in the current** year of AoC.
+6. An instance of Chromium will open to a GitHub\* login page. Log in with your credentials. Chromium will then close.
+7. Command line output will show progress for downloading the data for each problem in the current\*\* year of AoC.
 
 Once this is done, the folder `src/<current_year>` will contain a folder for each day, each of which includes your personalized data file and a solution file ready-to-run. Go ahead, run `node src/2019/01` and see that it prints out "Not implemented" for Part 1 and Part 2 of that problem. That's your job! Open up `src/2019/01/index.ts` and get to work!
 
@@ -51,14 +53,16 @@ To run the TypeScript solutions, use `npx ts-node src/YEAR/DAY`, replacing YEAR 
 The script `init.js` has two main functions: `suck` and `seed`.
 
 ### Suck
+
 Suck is designed to automatically download problem data from adventofcode.com. When `suck` is passed to `init.js`, the script will open an instance of Chromium to a GitHub login page. After you log in, Chromium gets redirected back to adventofcode.com, where a cookie is set containing your session token. `init.js` reads this cookie and saves your session token to disk in a file called `.scratch`.
 
-* Suck will **not** try to download data for problems that are not released yet.
-* Suck will **not** try to download data for problems that have already been downloaded, *unless* `--pristine` is passed.
-* Suck does **not** do anything with your session token, except as described in this readme.
+- Suck will **not** try to download data for problems that are not released yet.
+- Suck will **not** try to download data for problems that have already been downloaded, _unless_ `--pristine` is passed.
+- Suck does **not** do anything with your session token, except as described in this readme.
 
 #### Options
-`--year <year | "all">`: Specify the year of problems to suck in. If `all` is specified in place of the year, suck in data for all available years, starting in 2015. Defaults to the current year**.
+
+`--year <year | "all">`: Specify the year of problems to suck in. If `all` is specified in place of the year, suck in data for all available years, starting in 2015. Defaults to the current year\*\*.
 
 `--path <path>`: Specify the root path for writing data. Must be a fully qualified absolute path. Within this directory, directories for each year, then for each problem day will be created. Data is written to `input.txt` within the day directory.
 
@@ -69,10 +73,12 @@ Suck is designed to automatically download problem data from adventofcode.com. W
 `--pristine`: Request new data from adventofcode.com, even if the data file already exists.
 
 ### Seed
+
 Seed is designed to automatically create your working files. The default template (`solutionTemplate.ts.dat`) sets up imports, your solution functions, data import, and logging your solution.
 
 #### Options
-`--year <year | ">`: Specify the year of problems to seed solution files. If `all` is specified in place of the year, seed for all available years, starting in 2015. Defaults to the current year**.
+
+`--year <year | ">`: Specify the year of problems to seed solution files. If `all` is specified in place of the year, seed for all available years, starting in 2015. Defaults to the current year\*\*.
 
 `--path <path>`: Specify the root path for writing data. Must be a fully qualified absolute path. Within this directory, directories for each year, then for each problem day will be created. Solution files are named `index` with a file extension found in your template file name (e.g. `solutionTemplate.rb.dat` will result in solution files named `index.rb`).
 
@@ -84,15 +90,17 @@ Seed is designed to automatically create your working files. The default templat
 
 \* More auth providers coming soon. This step is necessary to get a session token that allows the script to download your personalized problem data.
 
-** The current year will resolve as last year until new problems are available. For instance, if you run this in November 2020, it will suck in problems from 2019. If you run in December 2020, you will start getting the problems from 2020.
+\*\* The current year will resolve as last year until new problems are available. For instance, if you run this in November 2020, it will suck in problems from 2019. If you run in December 2020, you will start getting the problems from 2020.
 
 ## Advent of Code Solutions
+
 The default template sets up each solution file to automatically read the problem's data file and call 2 functions: one for Part 1 and one for Part 2. The result of calling the solution function is printed to the console on a green background.
 
 The solution function is asynchronous by default. Even if the solution is completely synchronous, everything will still work.
 
 ### Test Cases
-There is a small framework included for running test cases. The `run()` function includes two variables, `part1tests` and `part2tests`, each of which is an array of `TestCase`. A `TestCase` is a simple object with two properties: `input` and `expected`. If using VSCode, you can use the `test` snippet to insert a new test case at your cursor. Any tests added to the test case arrays will be run *before* the main problem's input so you don't have to worry about a solution that takes a long time to run before seeing output. Test cases are printed out in an easy-to-read format (screenshot below).
+
+There is a small framework included for running test cases. The `run()` function includes two variables, `part1tests` and `part2tests`, each of which is an array of `TestCase`. A `TestCase` is a simple object with two properties: `input` and `expected`. If using VSCode, you can use the `test` snippet to insert a new test case at your cursor. Any tests added to the test case arrays will be run _before_ the main problem's input so you don't have to worry about a solution that takes a long time to run before seeing output. Test cases are printed out in an easy-to-read format (screenshot below).
 
 You can pass `true` to `beginTests()` and `beginSection()` to suppress the output of all tests or tests in a particular section, respectively.
 

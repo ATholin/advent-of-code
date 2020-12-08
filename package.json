@@ -15,7 +15,7 @@
 		"lint:fix": "eslint --fix .",
 		"lint:md": "markdownlint --ignore-path '.gitignore' .",
 		"lint:rmd": "remark .",
-		"fmt": "prettier --write \"src/**/*.ts\"",
+		"fmt": "prettier --write \"**/*\"",
 		"fmt:check": "prettier --check .",
 		"codecov": "codecov",
 		"clean": "rimraf ./dist ./coverage ./.codacy-coverage ./cache"
