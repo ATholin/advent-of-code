@@ -2,3 +2,7 @@ coverage:
   range: 60..75
   round: down
   precision: 2
+ignore:
+  - './*.ts'
+  - './src/util/**/*'
+  - './src/template/**/*'
