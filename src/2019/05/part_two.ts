@@ -11,10 +11,7 @@ import { day, year } from '.';
  */
 
 export const runner = (input: string): number => {
-	return new IntCode(input)
-	.withInput(5)
-	.execute()
-	.getOutput();
+	return new IntCode(input).withInput(5).execute().getOutput();
 };
 
 if (require.main === module) {
