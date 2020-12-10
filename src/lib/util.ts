@@ -77,3 +77,15 @@ export const mult = (acc: number, next: number): number => acc * next;
 export const dup = (next: number): number => next * 2;
 export const asc = (a: number, b: number): number => a - b;
 export const desc = (a: number, b: number): number => b - a;
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const permutations = (arr) => {
+	if (arr.length <= 2) return arr.length === 2 ? [arr, [arr[1], arr[0]]] : [arr];
+	return arr.reduce(
+		(acc, item, i) =>
+			acc.concat(
+				permutations([...arr.slice(0, i), ...arr.slice(i + 1)]).map((val) => [item, ...val])
+			),
+		[]
+	);
+};

@@ -48,12 +48,12 @@ export class IntCode {
 		return this;
 	};
 
-	pushInput = (input: number): this => {
+	pushInput = (input: number | number[]): this => {
 		if (!this.input) {
 			this.input = [];
 		}
 
-		this.input.push(input);
+		Array.isArray(input) ? (this.input = this.input.concat(input)) : this.input.push(input);
 
 		return this;
 	};
