@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { getAppRoot, getDayRoot, getLatestPuzzleDate } from '@lib/util';
+import { getAppRoot, getDayRoot, getLatestPuzzleDate } from './src/lib/util';
 import playwright from 'playwright-chromium';
 import { LocalStorage } from 'node-localstorage';
 import * as path from 'path';

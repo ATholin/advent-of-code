@@ -4,7 +4,7 @@
 	"description": "ATholin's solutions to Advent of Code 2020",
 	"main": "index.js",
 	"scripts": {
-		"init": "ts-node init.ts suck seed",
+		"init": "ts-node --project tsconfig.json init.ts suck seed",
 		"suck": "ts-node init.ts suck",
 		"seed": "ts-node init.ts seed",
 		"start": "ts-node run.ts",
@@ -64,7 +64,7 @@
 		"remark-lint-maximum-line-length": "^2.0.3",
 		"remark-preset-lint-consistent": "^4.0.0",
 		"remark-preset-lint-recommended": "^5.0.0",
-		"ts-node": "^9.0.0",
+		"ts-node": "^9.1.0",
 		"typescript": "^4.1.2"
 	},
 	"devDependencies": {

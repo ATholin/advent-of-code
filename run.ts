@@ -1,4 +1,4 @@
-import * as util from '@lib/util';
+import * as util from './src/lib/util';
 import path from 'path';
 import chalk from 'chalk';
 import { read, bench } from '@lib';

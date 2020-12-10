@@ -8,5 +8,5 @@ export enum Instruction {
 	LT = 7,
 	EQ = 8,
 	AB = 9,
-	HALT = 99
+	HALT = 99,
 }
