@@ -8,7 +8,7 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 
 ## [2020](https://adventofcode.com/2020/)
 
-[![2020 Progress](https://img.shields.io/static/v1?label=AoC%202020&message=8/25&color=orange)](./src/2020/)
+[![2020 Progress](https://img.shields.io/static/v1?label=AoC%202020&message=9/25&color=orange)](./src/2020/)
 
 <!-- markdownlint-disable MD013 -->
 
