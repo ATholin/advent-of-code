@@ -170,5 +170,5 @@ export class IntCode {
 
 	isHalted = (): boolean => this.halt;
 
-	getOutput = (): number | undefined => this.output.pop();
+	getOutput = (): number => this.output.pop() ?? 0;
 }
