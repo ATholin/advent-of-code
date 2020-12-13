@@ -25,3 +25,4 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 | [Day 9](./src/2020/09/)  | [10.2ms](./src/2020/09/index.ts)    | [13.3ms](./src/2020/09/index.ts)    |
 | [Day 10](./src/2020/10/) | [8.40ms](./src/2020/10/index.ts)    | [6.22ms](./src/2020/10/index.ts)    |
 | [Day 11](./src/2020/11/) | [1944ms 😱](./src/2020/11/index.ts) | [1729ms 😱](./src/2020/11/index.ts) |
+| [Day 12](./src/2020/12/) | [12.6ms](./src/2020/12/index.ts)    | [8.97ms](./src/2020/12/index.ts)    |
