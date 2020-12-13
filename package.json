@@ -4,6 +4,7 @@
 	"description": "ATholin's solutions to Advent of Code 2020",
 	"main": "index.js",
 	"scripts": {
+		"scaffold": "ts-node --project tsconfig.json scaffold/src/index.ts",
 		"init": "ts-node --project tsconfig.json init.ts suck seed",
 		"suck": "ts-node init.ts suck",
 		"seed": "ts-node init.ts seed",
@@ -40,9 +41,11 @@
 		"@typescript-eslint/eslint-plugin": "^4.9.1",
 		"@typescript-eslint/parser": "^4.9.1",
 		"a-star": "^0.2.0",
+		"axios": "^0.21.0",
 		"chai": "^4.2.0",
 		"chalk": "^4.1.0",
 		"codecov": "^3.8.1",
+		"dotenv": "^8.2.0",
 		"eslint": "^7.15.0",
 		"eslint-config-prettier": "^7.0.0",
 		"eslint-plugin-prettier": "^3.2.0",
@@ -55,6 +58,7 @@
 		"mkdirp": "^1.0.4",
 		"mocha": "^8.2.1",
 		"node-fetch": "^2.6.1",
+		"node-html-parser": "^2.0.0",
 		"node-localstorage": "^2.1.6",
 		"nyc": "^15.1.0",
 		"playwright-chromium": "^1.6.2",
@@ -65,11 +69,14 @@
 		"remark-preset-lint-consistent": "^4.0.0",
 		"remark-preset-lint-recommended": "^5.0.0",
 		"ts-node": "^9.1.0",
-		"typescript": "^4.1.2"
+		"turndown": "^7.0.0",
+		"typescript": "^4.1.2",
+		"yargs": "^13.3.2"
 	},
 	"devDependencies": {
 		"@types/chai": "^4.2.14",
 		"@types/node": "^14.14.10",
+		"@types/yargs": "^15.0.11",
 		"tsconfig-paths": "^3.9.0"
 	}
 }

@@ -40,6 +40,6 @@
 			"mocha"
 		] /* Type declaration files to be included in compilation. */
 	},
-	"include": ["./src/**/*", "./util/**/*", "./*.ts"],
+	"include": ["./src/**/*", "./scaffold/**/*"],
 	"exclude": ["**/node_modules/**/*"]
 }
