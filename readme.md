@@ -39,15 +39,19 @@ Prerequisites: install [Node.js](https://nodejs.org) 14 (LTS) or later.
 3. Clone the forked repository
 4. `cd` into the repository and run `npm install`
 5. Copy the example environment file to `.env`:
+
 ```
 cp .env.example .env
 ```
 
 6. Scaffold the current day:
+
 ```
 npm run scaffold
 ```
+
 Or scaffold any day:
+
 ```
 npm run scaffold -- --year 2015 --day 1
 ```
