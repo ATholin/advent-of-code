@@ -8,7 +8,7 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 
 ## [2020](https://adventofcode.com/2020/)
 
-[![2020 Progress](https://img.shields.io/static/v1?label=AoC%202020&message=11/25&color=orange)](./src/2020/)
+[![2020 Progress](https://img.shields.io/static/v1?label=AoC%202020&message=13/25&color=orange)](./src/2020/)
 
 <!-- markdownlint-disable MD013 -->
 
@@ -26,3 +26,4 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 | [Day 10](./src/2020/10/) | [8.40ms](./src/2020/10/index.ts)    | [6.22ms](./src/2020/10/index.ts)    |
 | [Day 11](./src/2020/11/) | [1944ms 😱](./src/2020/11/index.ts) | [1729ms 😱](./src/2020/11/index.ts) |
 | [Day 12](./src/2020/12/) | [12.6ms](./src/2020/12/index.ts)    | [8.97ms](./src/2020/12/index.ts)    |
+| [Day 13](./src/2020/13/) | [9.08ms](./src/2020/13/index.ts)    | [9.67ms](./src/2020/13/index.ts)    |
