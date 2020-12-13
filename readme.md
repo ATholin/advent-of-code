@@ -27,3 +27,37 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 | [Day 11](./src/2020/11/) | [1944ms 😱](./src/2020/11/index.ts) | [1729ms 😱](./src/2020/11/index.ts) |
 | [Day 12](./src/2020/12/) | [12.6ms](./src/2020/12/index.ts)    | [8.97ms](./src/2020/12/index.ts)    |
 | [Day 13](./src/2020/13/) | [9.08ms](./src/2020/13/index.ts)    | [9.67ms](./src/2020/13/index.ts)    |
+
+## Usage
+
+Prerequisites: install [Node.js](https://nodejs.org) 14 (LTS) or later.
+
+**Quick-start instructions**
+
+1. Create an account at https://adventofcode.com.
+2. Fork this repo
+3. Clone the forked repository
+4. `cd` into the repository and run `npm install`
+5. Copy the example environment file to `.env`:
+```
+cp .env.example .env
+```
+
+6. Scaffold the current day:
+```
+npm run scaffold
+```
+Or scaffold any day:
+```
+npm run scaffold -- --year 2015 --day 1
+```
+
+To run the TypeScript solution, open a file in VS Code and run the "Current TS File" option.
+
+## Testing
+
+Run the tests with:
+
+```
+npm test
+```
