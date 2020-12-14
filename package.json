@@ -4,11 +4,11 @@
 	"description": "ATholin's solutions to Advent of Code 2020",
 	"main": "index.js",
 	"scripts": {
-		"scaffold": "ts-node --project tsconfig.json scaffold/src/index.ts",
+		"scaffold": "ts-node  -r tsconfig-paths/register scaffold/src/index.ts",
+		"start": "ts-node  -r tsconfig-paths/register index.ts",
 		"init": "ts-node --project tsconfig.json init.ts suck seed",
 		"suck": "ts-node init.ts suck",
 		"seed": "ts-node init.ts seed",
-		"start": "ts-node run.ts",
 		"test": "mocha --config ./.mocharc.json",
 		"test:parallel": "mocha --parallel --config ./.mocharc.json",
 		"test:coverage": "nyc --reporter=lcov npm test",
