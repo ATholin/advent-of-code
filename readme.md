@@ -1,5 +1,6 @@
 # Advent of Code ⭐️
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ATholin/advent-of-code/Node%20CI)
 [![codecov](https://codecov.io/gh/ATholin/advent-of-code/branch/main/graph/badge.svg?token=PNV507325B)](https://codecov.io/gh/ATholin/advent-of-code)
 ![Maintainability](https://img.shields.io/codeclimate/maintainability/ATholin/advent-of-code)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
