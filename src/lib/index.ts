@@ -1,7 +1,7 @@
 import { promises } from 'fs';
 import { performance, PerformanceObserver } from 'perf_hooks';
 import { NEWLINE } from './regex';
-import chalk from 'chalk'
+import chalk from 'chalk';
 
 export * from './util';
 

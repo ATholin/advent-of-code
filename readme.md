@@ -43,6 +43,7 @@ Prerequisites: install [Node.js](https://nodejs.org) 14 (LTS) or later.
 ```bash
 cp .env.example .env
 ```
+
 6. In the created `.env` file, add your AOC session token to the `SESSION` variable
 
 7. Scaffold a puzzle:
