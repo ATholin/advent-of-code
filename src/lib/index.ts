@@ -1,6 +1,7 @@
 import { promises } from 'fs';
 import { performance, PerformanceObserver } from 'perf_hooks';
 import { NEWLINE } from './regex';
+import chalk from 'chalk';
 
 export * from './util';
 
@@ -118,11 +119,11 @@ export const bench = async <T, R = string, A = undefined>(
 	const result = await runner(input, args);
 	performance.mark('runend');
 
-	console.log('--- Performance ---');
-	performance.measure('run', 'runstart', 'runend');
-	performance.measure('read', 'readstart', 'readend');
-	performance.measure('both', 'readstart', 'runend');
-	performance.measure('total', 'start', 'runend');
+	console.log(chalk.gray('--- Performance ---'));
+	performance.measure(chalk.gray('run'), 'runstart', 'runend');
+	performance.measure(chalk.gray('read'), 'readstart', 'readend');
+	performance.measure(chalk.gray('both'), 'readstart', 'runend');
+	performance.measure(chalk.gray('total'), 'start', 'runend');
 
 	obs.disconnect();
 	return result;

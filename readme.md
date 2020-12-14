@@ -32,7 +32,7 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 
 Prerequisites: install [Node.js](https://nodejs.org) 14 (LTS) or later.
 
-**Quick-start instructions**
+### Quick-start instructions
 
 1. Create an account at https://adventofcode.com.
 2. Fork this repo
@@ -40,28 +40,40 @@ Prerequisites: install [Node.js](https://nodejs.org) 14 (LTS) or later.
 4. `cd` into the repository and run `npm install`
 5. Copy the example environment file to `.env`:
 
-```
+```bash
 cp .env.example .env
 ```
 
-6. Scaffold the current day:
+6. In the created `.env` file, add your AOC session token to the `SESSION` variable
 
-```
-npm run scaffold
-```
+7. Scaffold a puzzle:
 
-Or scaffold any day:
-
-```
-npm run scaffold -- --year 2015 --day 1
+```bash
+npm scaffold 							# Scaffold the current day
+npm run scaffold -- --year 2015 --day 1	# Scaffold [year] [day]
 ```
 
-To run the TypeScript solution, open a file in VS Code and run the "Current TS File" option.
+8. Run a puzzle:
+
+```bash
+npm start 			# Run the current day
+npm start 2015 1 	# Run [year] [day]
+```
 
 ## Testing
 
 Run the tests with:
 
-```
+```bash
 npm test
 ```
+
+Run the tests (in parallel) with:
+
+```bash
+npm run test:parallel
+```
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
