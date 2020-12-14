@@ -1,8 +1,9 @@
 # Advent of Code ⭐️
 
 [![codecov](https://codecov.io/gh/ATholin/advent-of-code/branch/main/graph/badge.svg?token=PNV507325B)](https://codecov.io/gh/ATholin/advent-of-code)
-[![Last Commit on GitHub](https://img.shields.io/github/last-commit/ATholin/advent-of-code.svg)](https://github.com/ATholin/advent-of-code)
+![Maintainability](https://img.shields.io/codeclimate/maintainability/ATholin/advent-of-code)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Last Commit on GitHub](https://img.shields.io/github/last-commit/ATholin/advent-of-code.svg)](https://github.com/ATholin/advent-of-code)
 
 This repository contains my solutions for [Advent of Code](https://adventofcode.com) problems. All solutions are implemented in TypeScript and JavaScript, runnable with modern Node.js.
 
