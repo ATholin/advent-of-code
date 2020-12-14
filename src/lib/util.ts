@@ -72,6 +72,18 @@ export async function getInput(
 	return fs.readFile(path.join(dayRoot, file), 'utf-8');
 }
 
+export const chunk = <T>(arr: T[], size: number): T[][] => {
+	const sets: T[][] = [];
+	const chunks = Math.ceil(arr.length / size);
+	let i = 0;
+
+	while (i < chunks) {
+		sets[i] = arr.splice(0, size);
+		i += 1;
+	}
+	return sets;
+};
+
 export const sum = (acc: number, next: number): number => acc + next;
 export const mult = (acc: number, next: number): number => acc * next;
 export const dup = (next: number): number => next * 2;
