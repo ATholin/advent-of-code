@@ -10,7 +10,7 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 
 ## [2020](https://adventofcode.com/2020/)
 
-[![2020 Progress](https://img.shields.io/static/v1?label=AoC%202020&message=14/25&color=orange)](./src/2020/)
+[![2020 Progress](https://img.shields.io/static/v1?label=AoC%202020&message=15/25&color=orange)](./src/2020/)
 
 <!-- markdownlint-disable MD013 -->
 
@@ -30,6 +30,7 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 | [Day 12](./src/2020/12/) | [12.6ms](./src/2020/12/part_one.ts)    | [8.97ms](./src/2020/12/part_two.ts)    |
 | [Day 13](./src/2020/13/) | [9.08ms](./src/2020/13/part_one.ts)    | [9.67ms](./src/2020/13/part_two.ts)    |
 | [Day 14](./src/2020/14/) | [11.7ms](./src/2020/14/part_one.ts)    | [111ms](./src/2020/14/part_two.ts)     |
+| [Day 15](./src/2020/15/) | [5.96ms](./src/2020/15/part_one.ts)    | [5716ms 😱](./src/2020/15/part_two.ts)     |
 
 ## Usage
 
