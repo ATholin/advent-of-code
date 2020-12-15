@@ -14,10 +14,8 @@
 		"test:coverage": "nyc --reporter=lcov npm test",
 		"lint": "eslint --max-warnings=0 .",
 		"lint:fix": "eslint --fix .",
-		"lint:md": "markdownlint --ignore-path '.gitignore' .",
-		"lint:rmd": "remark .",
-		"fmt": "prettier --write \"**/*\"",
-		"fmt:check": "prettier --check .",
+		"fmt": "prettier --write src/**/* scaffold/**/* index.ts *.md",
+		"fmt:check": "prettier --check ./src/",
 		"codecov": "codecov",
 		"clean": "rimraf ./dist ./coverage ./.codacy-coverage ./cache"
 	},
@@ -53,8 +51,6 @@
 		"gatt": "^1.0.5",
 		"js-combinatorics": "^1.4.5",
 		"lodash": "^4.17.20",
-		"markdownlint": "^0.22.0",
-		"markdownlint-cli": "^0.25.0",
 		"mkdirp": "^1.0.4",
 		"mocha": "^8.2.1",
 		"node-fetch": "^2.6.1",
@@ -63,7 +59,6 @@
 		"nyc": "^15.1.0",
 		"playwright-chromium": "^1.6.2",
 		"prettier": "^2.2.1",
-		"remark": "^13.0.0",
 		"remark-cli": "^9.0.0",
 		"remark-lint-maximum-line-length": "^2.0.3",
 		"remark-preset-lint-consistent": "^4.0.0",
@@ -77,6 +72,13 @@
 		"@types/chai": "^4.2.14",
 		"@types/node": "^14.14.10",
 		"@types/yargs": "^15.0.11",
+		"husky": "^4.3.6",
+		"pretty-quick": "^3.1.0",
 		"tsconfig-paths": "^3.9.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
 	}
 }

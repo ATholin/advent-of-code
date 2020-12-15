@@ -15,12 +15,14 @@ const earliest = (ids: number[], timestamp: number): EarliestDeparture => {
 		return timestamp % id === 0;
 	});
 
-	return filtered.length > 0
-		? {
-				id: filtered[0],
-				timestamp,
-		  }
-		: earliest(ids, timestamp + 1);
+	if (filtered.length > 0) {
+		return {
+			id: filtered[0],
+			timestamp,
+		};
+	}
+
+	return earliest(ids, timestamp + 1);
 };
 
 /**
